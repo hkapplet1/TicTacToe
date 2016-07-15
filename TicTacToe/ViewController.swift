@@ -45,6 +45,7 @@ class ViewController: UIViewController {
     @IBAction func toggleIsVisitingPlayerButton(sender: UIButton){
         countButtonMarkNumber()
         // 先攻按鈕被點選
+        print("before toggling, sender is : \(sender)")
         if sender == isVisitingPlayerButton{
             if buttonMarkNumber > 0 {
                 messageGaming()
@@ -68,6 +69,9 @@ class ViewController: UIViewController {
                 startButton.backgroundColor = UIColor.blueColor()
             }
         }
+        
+        print("after toggling, sender is : \(sender)")
+        
     }
     
     
@@ -101,7 +105,7 @@ class ViewController: UIViewController {
     // 畫Ｏ或Ｘ
     func drawMark(button: UIButton, mark: String) {
         if mark == "O" {
-            button.tintColor = UIColor.blueColor()
+            button.tintColor = UIColor.blackColor()
         } else if mark == "X" {
             button.tintColor = UIColor.redColor()
         }
