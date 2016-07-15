@@ -26,7 +26,9 @@ class ViewController: UIViewController {
     @IBOutlet var markXButton: UIButton!
     @IBOutlet var startButton: UIButton!
 
-
+    @IBOutlet weak var resetButton: UIButton!
+    
+    
     var isVisitingPlayerDone = false;       // 先攻
     var isGameOver = false
     var userMark = "O"
@@ -39,8 +41,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
     
+    
+    
+    @IBAction func resetGame(sender: UIButton) {
+        clearTable()
+    }
     
     @IBAction func toggleIsVisitingPlayerButton(sender: UIButton){
         countButtonMarkNumber()
@@ -136,18 +145,27 @@ class ViewController: UIViewController {
     // Set Button
     @IBAction func buttonTapped(sender: UIButton) {
         
+        if buttonMarkNumber > 0 {
+            resetButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            resetButton.backgroundColor = UIColor.blueColor()
+        }
+        
         if sender != startButton {
             if (isVisitingPlayerDone == false) && (sender.currentImage == nil) {
+//            if (sender.currentImage == nil) {
                 drawMark(sender, mark: userMark)
                 isVisitingPlayerDone = true
                 //print(sender.currentTitle)
             } else if sender.currentImage != nil {
-                let alertMessage = UIAlertController(title: nil, message: "這位置已經下過了！！", preferredStyle: .Alert)
-                alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                self.presentViewController(alertMessage, animated: true, completion: nil)
+//                let alertMessage = UIAlertController(title: nil, message: "這位置已經下過了！！", preferredStyle: .Alert)
+//                alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//                self.presentViewController(alertMessage, animated: true, completion: nil)
                 return
             }
+            
+            
         }
+        
         
         //print("AI先")
         

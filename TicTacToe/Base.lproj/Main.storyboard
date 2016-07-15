@@ -285,6 +285,20 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iUM-Jn-aVz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USz-Cd-Z2H">
+                                <rect key="frame" x="428" y="500" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QHL-Jg-uvB"/>
+                                </constraints>
+                                <color key="tintColor" red="0.21943162751677853" green="0.5601488801657718" blue="0.44742543470000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKV-Ep-v3B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -316,6 +330,7 @@
                         <outlet property="markOButton" destination="p11-aO-pxn" id="DB2-5A-pu1"/>
                         <outlet property="markXButton" destination="2Ah-DH-JIv" id="LMM-QS-62e"/>
                         <outlet property="notVisitingPlayerButton" destination="FwR-h7-3tW" id="Sxl-zF-7ue"/>
+                        <outlet property="resetButton" destination="USz-Cd-Z2H" id="doa-yS-wYH"/>
                         <outlet property="startButton" destination="ozy-k0-FeB" id="FUg-kp-xzh"/>
                     </connections>
                 </viewController>
